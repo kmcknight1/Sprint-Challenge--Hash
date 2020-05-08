@@ -1,9 +1,14 @@
 def finder(files, queries):
 
-    """
-    YOUR CODE HERE
-    """
+    ht = {files.index(v):v for v in files}
 
+    print(ht)
+
+    result = []
+    for i in range(len(queries)):
+        if queries[i] in ht[i].split("/"):
+            print(f'i:{i} queries[i]:{queries[i]} ht[i]:{ht[i]}')
+            result.append(ht[i])
     return result
 
 
